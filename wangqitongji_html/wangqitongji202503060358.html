@@ -1,0 +1,88 @@
+
+    <!DOCTYPE html>
+    <html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TrendHunter Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            h1, h2, h3 { color: #333; }
+            ul { padding-left: 20px; }
+            p, li { line-height: 1.6; word-wrap: break-word; overflow-wrap: break-word; }
+            .container { max-width: 800px; margin: auto; }
+            .highlight { background-color: #f0f8ff; padding: 10px; border-radius: 5px; }
+            #passwordBox { margin-top: 50px; text-align: center; }
+            #passwordInput { padding: 10px; font-size: 16px; width: 200px; margin-bottom: 10px; }
+            #errorMessage { color: red; display: none; }
+        </style>
+        <script>
+            function checkPassword() {
+                let inputPassword = document.getElementById('passwordInput').value;
+                if (inputPassword !== "6") {
+                    document.getElementById('errorMessage').style.display = 'block';
+                } else {
+                    document.getElementById('errorMessage').style.display = 'none';
+                    document.getElementById('report-content').style.display = 'block';
+                    document.getElementById('passwordBox').style.display = 'none';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="passwordBox">
+            <h2>请输入密码以查看内容：</h2>
+            <input type="password" id="passwordInput" placeholder="输入密码">
+            <br>
+            <button onclick="checkPassword()">确认</button>
+            <p id="errorMessage">密码错误！请重试。</p>
+        </div>
+        
+        <div id="report-content" class="container" style="display: none;">
+            <h1>推算报告</h1>
+            <p>今日日期：2025-03-06</p>
+            <p>所属月份：3</p>
+            <p>所属星期几：周四</p>
+            <p>上期开奖号码：[4, 9, 7]</p>
+            
+            <h2>一、推算下期开奖号码结果：</h2>
+            <ul>
+                <li>近5期推算：4,7,6</li>
+                <li>往年今日推算：1,8,3</li>
+                <li>往月今日推算：1,7,8</li>
+                <li>以往同周推算：5,0,8</li>
+                <li>历史数位： 408,409,405,418,419,415,488,489,485,908,909,905,918,919,915,988,989,985,108,109,105,118,119,115,188,189,185</li>
+            </ul>
+            
+            <h2>二、历史统计简报数据</h2>
+            <h3>1、根据上期号码的历史数字位置统计</h3>
+            <p class="highlight">百位预测：['4: 84次', '9: 84次', '1: 81次']</p>
+            <p class="highlight">十位预测：['0: 80次', '1: 80次', '8: 77次']</p>
+            <p class="highlight">个位预测：['8: 103次', '9: 78次', '5: 76次']</p>
+            
+            <h3>2、“最近5期”数字频率：</h3>
+            <p>频率排序：5,9,8,0,4,7,6</p>
+            <p>频率次数：['5: 4次', '9: 3次', '8: 3次', '0: 2次', '4: 1次', '7: 1次', '6: 1次']</p>
+            
+            <h3>3、“往年今日”数字频率：</h3>
+            <p>频率排序：2,6,0,9,5,7,8,3,4,1</p>
+            <p>频率次数：['2: 12次', '6: 9次', '0: 7次', '9: 5次', '5: 5次', '7: 5次', '8: 4次', '3: 4次', '4: 4次', '1: 2次']</p>
+            
+            <h3>4、“往月今日”数字频率：</h3>
+            <p>频率排序：0,9,6,4,2,3,5,8,7,1</p>
+            <p>频率次数：['0: 80次', '9: 79次', '6: 76次', '4: 76次', '2: 75次', '3: 71次', '5: 70次', '8: 67次', '7: 61次', '1: 53次']</p>
+            
+            <h3>5、“以往同周”数字频率：</h3>
+            <p>频率排序：1,6,9,2,4,7,3,8,0,5</p>
+            <p>频率次数：['1: 347次', '6: 322次', '9: 315次', '2: 309次', '4: 305次', '7: 304次', '3: 301次', '8: 297次', '0: 296次', '5: 288次']</p>
+            
+            <h2>三、历史开奖号码简报</h2>
+            <h3>1、最近5期开奖号码统计：</h3>
+            <p>2025-03-05 - 开奖号码：4,9,7<br>2025-03-04 - 开奖号码：8,9,5<br>2025-03-03 - 开奖号码：5,8,5<br>2025-03-02 - 开奖号码：9,0,5<br>2025-03-01 - 开奖号码：8,0,6</p>
+            
+            <h3>2、往年今日开奖号码统计：</h3>
+            <p>2005-03-06 - 开奖号码：1,9,5<br>2006-03-06 - 开奖号码：6,6,6<br>2007-03-06 - 开奖号码：6,6,8<br>2008-03-06 - 开奖号码：7,9,3<br>2009-03-06 - 开奖号码：2,0,8<br>2010-03-06 - 开奖号码：0,2,3<br>2011-03-06 - 开奖号码：0,6,2<br>2012-03-06 - 开奖号码：2,6,9<br>2013-03-06 - 开奖号码：0,8,2<br>2014-03-06 - 开奖号码：5,0,2<br>2015-03-06 - 开奖号码：5,6,9<br>2016-03-06 - 开奖号码：7,4,1<br>2017-03-06 - 开奖号码：2,6,2<br>2018-03-06 - 开奖号码：7,2,3<br>2019-03-06 - 开奖号码：0,2,0<br>2021-03-06 - 开奖号码：2,4,5<br>2022-03-06 - 开奖号码：7,9,4<br>2023-03-06 - 开奖号码：8,7,3<br>2024-03-06 - 开奖号码：5,4,2</p>
+        </div>
+    </body>
+    </html>
+    

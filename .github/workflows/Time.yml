@@ -1,0 +1,19 @@
+name: Print Current Time
+
+on:
+  # schedule:
+  # - cron: '30 14 * * *'  # 每天 UTC 时间 02:00，等于北京时间 10:00
+  workflow_dispatch:  # 手动触发工作流按钮
+
+jobs:
+  print_time:
+    runs-on: ubuntu-latest  # 运行在 Ubuntu 环境中
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Output current time
+        run: |
+          echo "Current Time (UTC): $(date -u)"
+          echo "Current Time (Local): $(date)"
