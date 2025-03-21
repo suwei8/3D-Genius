@@ -2,6 +2,8 @@ name: 模型推算10组版本2
 
 on:
   workflow_dispatch:  # 手动触发工作流按钮
+  schedule:
+  - cron: '0 2-5 * * *' #每天 UTC 2 点到 10 点之间的每个整点执行一次，转换到北京时间则是 每天 9 点到 17 点每小时的第15分钟执行
 
 jobs:
   run-trendhunter:
