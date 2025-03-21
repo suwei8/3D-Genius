@@ -1,0 +1,88 @@
+
+    <!DOCTYPE html>
+    <html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TrendHunter Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            h1, h2, h3 { color: #333; }
+            ul { padding-left: 20px; }
+            p, li { line-height: 1.6; word-wrap: break-word; overflow-wrap: break-word; }
+            .container { max-width: 800px; margin: auto; }
+            .highlight { background-color: #f0f8ff; padding: 10px; border-radius: 5px; }
+            #passwordBox { margin-top: 50px; text-align: center; }
+            #passwordInput { padding: 10px; font-size: 16px; width: 200px; margin-bottom: 10px; }
+            #errorMessage { color: red; display: none; }
+        </style>
+        <script>
+            function checkPassword() {
+                let inputPassword = document.getElementById('passwordInput').value;
+                if (inputPassword !== "6") {
+                    document.getElementById('errorMessage').style.display = 'block';
+                } else {
+                    document.getElementById('errorMessage').style.display = 'none';
+                    document.getElementById('report-content').style.display = 'block';
+                    document.getElementById('passwordBox').style.display = 'none';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="passwordBox">
+            <h2>请输入密码以查看内容：</h2>
+            <input type="password" id="passwordInput" placeholder="输入密码">
+            <br>
+            <button onclick="checkPassword()">确认</button>
+            <p id="errorMessage">密码错误！请重试。</p>
+        </div>
+        
+        <div id="report-content" class="container" style="display: none;">
+            <h1>推算报告</h1>
+            <p>今日日期：2025-03-21</p>
+            <p>所属月份：3</p>
+            <p>所属星期几：周五</p>
+            <p>上期开奖号码：[9, 0, 6]</p>
+            
+            <h2>一、推算下期开奖号码结果：</h2>
+            <ul>
+                <li>近5期推算：9,6,7</li>
+                <li>往年今日推算：5,8,9</li>
+                <li>往月今日推算：4,3,5</li>
+                <li>以往同周推算：2,0,5</li>
+                <li>历史数位： 865,869,868,845,849,848,805,809,808,365,369,368,345,349,348,305,309,308,565,569,568,545,549,548,505,509,508</li>
+            </ul>
+            
+            <h2>二、历史统计简报数据</h2>
+            <h3>1、根据上期号码的历史数字位置统计</h3>
+            <p class="highlight">百位预测：['8: 79次', '3: 77次', '5: 76次']</p>
+            <p class="highlight">十位预测：['6: 88次', '4: 84次', '0: 83次']</p>
+            <p class="highlight">个位预测：['5: 73次', '9: 72次', '8: 71次']</p>
+            
+            <h3>2、“最近5期”数字频率：</h3>
+            <p>频率排序：5,0,3,8,9,6,7,2</p>
+            <p>频率次数：['5: 5次', '0: 2次', '3: 2次', '8: 2次', '9: 1次', '6: 1次', '7: 1次', '2: 1次']</p>
+            
+            <h3>3、“往年今日”数字频率：</h3>
+            <p>频率排序：2,7,1,3,4,0,8,9,6,5</p>
+            <p>频率次数：['2: 8次', '7: 8次', '1: 7次', '3: 7次', '4: 6次', '0: 6次', '8: 5次', '9: 5次', '6: 5次', '5: 3次']</p>
+            
+            <h3>4、“往月今日”数字频率：</h3>
+            <p>频率排序：0,2,6,1,7,9,8,5,3,4</p>
+            <p>频率次数：['0: 81次', '2: 79次', '6: 77次', '1: 75次', '7: 74次', '9: 74次', '8: 74次', '5: 66次', '3: 65次', '4: 58次']</p>
+            
+            <h3>5、“以往同周”数字频率：</h3>
+            <p>频率排序：3,8,4,7,9,6,1,2,0,5</p>
+            <p>频率次数：['3: 327次', '8: 325次', '4: 318次', '7: 315次', '9: 313次', '6: 309次', '1: 301次', '2: 296次', '0: 296次', '5: 296次']</p>
+            
+            <h2>三、历史开奖号码简报</h2>
+            <h3>1、最近5期开奖号码统计：</h3>
+            <p>2025-03-20 - 开奖号码：9,0,6<br>2025-03-19 - 开奖号码：5,5,5<br>2025-03-18 - 开奖号码：3,8,5<br>2025-03-17 - 开奖号码：7,2,0<br>2025-03-16 - 开奖号码：5,3,8</p>
+            
+            <h3>2、往年今日开奖号码统计：</h3>
+            <p>2005-03-21 - 开奖号码：4,5,8<br>2006-03-21 - 开奖号码：4,1,9<br>2007-03-21 - 开奖号码：9,1,4<br>2008-03-21 - 开奖号码：4,0,0<br>2009-03-21 - 开奖号码：3,0,3<br>2010-03-21 - 开奖号码：9,3,2<br>2011-03-21 - 开奖号码：1,7,2<br>2012-03-21 - 开奖号码：8,4,1<br>2013-03-21 - 开奖号码：2,2,2<br>2014-03-21 - 开奖号码：6,6,2<br>2015-03-21 - 开奖号码：6,8,0<br>2016-03-21 - 开奖号码：7,7,7<br>2017-03-21 - 开奖号码：0,7,5<br>2018-03-21 - 开奖号码：2,7,5<br>2019-03-21 - 开奖号码：3,3,0<br>2020-03-21 - 开奖号码：7,9,4<br>2021-03-21 - 开奖号码：3,7,6<br>2022-03-21 - 开奖号码：6,1,8<br>2023-03-21 - 开奖号码：9,8,1<br>2024-03-21 - 开奖号码：2,1,3</p>
+        </div>
+    </body>
+    </html>
+    
