@@ -1,0 +1,88 @@
+
+    <!DOCTYPE html>
+    <html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TrendHunter Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            h1, h2, h3 { color: #333; }
+            ul { padding-left: 20px; }
+            p, li { line-height: 1.6; word-wrap: break-word; overflow-wrap: break-word; }
+            .container { max-width: 800px; margin: auto; }
+            .highlight { background-color: #f0f8ff; padding: 10px; border-radius: 5px; }
+            #passwordBox { margin-top: 50px; text-align: center; }
+            #passwordInput { padding: 10px; font-size: 16px; width: 200px; margin-bottom: 10px; }
+            #errorMessage { color: red; display: none; }
+        </style>
+        <script>
+            function checkPassword() {
+                let inputPassword = document.getElementById('passwordInput').value;
+                if (inputPassword !== "6") {
+                    document.getElementById('errorMessage').style.display = 'block';
+                } else {
+                    document.getElementById('errorMessage').style.display = 'none';
+                    document.getElementById('report-content').style.display = 'block';
+                    document.getElementById('passwordBox').style.display = 'none';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="passwordBox">
+            <h2>请输入密码以查看内容：</h2>
+            <input type="password" id="passwordInput" placeholder="输入密码">
+            <br>
+            <button onclick="checkPassword()">确认</button>
+            <p id="errorMessage">密码错误！请重试。</p>
+        </div>
+        
+        <div id="report-content" class="container" style="display: none;">
+            <h1>推算报告</h1>
+            <p>今日日期：2025-05-28</p>
+            <p>所属月份：5</p>
+            <p>所属星期几：周三</p>
+            <p>上期开奖号码：[8, 3, 8]</p>
+            
+            <h2>一、推算下期开奖号码结果：</h2>
+            <ul>
+                <li>近5期推算：7,6,3</li>
+                <li>往年今日推算：0,7,2</li>
+                <li>往月今日推算：9,2,6</li>
+                <li>以往同周推算：2,0,7</li>
+                <li>历史数位： 710,711,718,700,701,708,730,731,738,010,011,018,000,001,008,030,031,038,510,511,518,500,501,508,530,531,538</li>
+            </ul>
+            
+            <h2>二、历史统计简报数据</h2>
+            <h3>1、根据上期号码的历史数字位置统计</h3>
+            <p class="highlight">百位预测：['7: 82次', '0: 78次', '5: 77次']</p>
+            <p class="highlight">十位预测：['1: 80次', '0: 79次', '3: 78次']</p>
+            <p class="highlight">个位预测：['0: 99次', '1: 89次', '8: 86次']</p>
+            
+            <h3>2、“最近5期”数字频率：</h3>
+            <p>频率排序：8,4,3,1,5,7,6</p>
+            <p>频率次数：['8: 4次', '4: 3次', '3: 2次', '1: 2次', '5: 2次', '7: 1次', '6: 1次']</p>
+            
+            <h3>3、“往年今日”数字频率：</h3>
+            <p>频率排序：3,5,9,6,1,8,4,0,7,2</p>
+            <p>频率次数：['3: 10次', '5: 9次', '9: 9次', '6: 7次', '1: 7次', '8: 6次', '4: 6次', '0: 2次', '7: 2次', '2: 2次']</p>
+            
+            <h3>4、“往月今日”数字频率：</h3>
+            <p>频率排序：3,8,1,5,7,0,6,4,9,2</p>
+            <p>频率次数：['3: 92次', '8: 76次', '1: 75次', '5: 73次', '7: 71次', '0: 70次', '6: 68次', '4: 68次', '9: 62次', '2: 62次']</p>
+            
+            <h3>5、“以往同周”数字频率：</h3>
+            <p>频率排序：8,5,3,6,1,9,4,7,0,2</p>
+            <p>频率次数：['8: 347次', '5: 344次', '3: 327次', '6: 317次', '1: 310次', '9: 308次', '4: 303次', '7: 299次', '0: 296次', '2: 278次']</p>
+            
+            <h2>三、历史开奖号码简报</h2>
+            <h3>1、最近5期开奖号码统计：</h3>
+            <p>2025-05-27 - 开奖号码：8,3,8<br>2025-05-26 - 开奖号码：1,1,3<br>2025-05-25 - 开奖号码：4,5,8<br>2025-05-24 - 开奖号码：7,4,8<br>2025-05-23 - 开奖号码：6,4,5</p>
+            
+            <h3>2、往年今日开奖号码统计：</h3>
+            <p>2005-05-28 - 开奖号码：6,6,3<br>2006-05-28 - 开奖号码：3,6,3<br>2007-05-28 - 开奖号码：6,5,5<br>2008-05-28 - 开奖号码：9,3,8<br>2009-05-28 - 开奖号码：9,3,8<br>2010-05-28 - 开奖号码：1,9,0<br>2011-05-28 - 开奖号码：9,1,5<br>2012-05-28 - 开奖号码：3,4,9<br>2013-05-28 - 开奖号码：7,8,2<br>2014-05-28 - 开奖号码：9,0,1<br>2015-05-28 - 开奖号码：8,1,2<br>2016-05-28 - 开奖号码：4,3,5<br>2017-05-28 - 开奖号码：1,1,5<br>2018-05-28 - 开奖号码：5,3,6<br>2019-05-28 - 开奖号码：3,1,5<br>2020-05-28 - 开奖号码：6,6,8<br>2021-05-28 - 开奖号码：9,5,4<br>2022-05-28 - 开奖号码：9,4,3<br>2023-05-28 - 开奖号码：9,4,5<br>2024-05-28 - 开奖号码：7,4,8</p>
+        </div>
+    </body>
+    </html>
+    
