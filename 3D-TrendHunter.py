@@ -175,7 +175,7 @@ today_date = now.strftime('%Y-%m-%d')
 # 微信模板消息
 # -------------------
 # 定义需要发送的用户列表
-to_users = ["oXUv66MibUi7VInLBf7AHqMIY438", "oXUv66DvDIoQG39Vnspwj97QVLn4"]
+to_users = ["oXUv66MibUi7VInLBf7AHqMIY438", "oXUv66DvDIoQG39Vnspwj97QVLn4", "oXUv66HUVNyZ0Hd8RWKmkVV1dkAs"]
 
 # 循环发送模板消息
 for to_user in to_users:
