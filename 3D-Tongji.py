@@ -90,7 +90,8 @@ if __name__ == "__main__":
 
         to_users = [
             "oXUv66MibUi7VInLBf7AHqMIY438",
-            "oXUv66DvDIoQG39Vnspwj97QVLn4"
+            "oXUv66DvDIoQG39Vnspwj97QVLn4",
+            "oXUv66HUVNyZ0Hd8RWKmkVV1dkAs"
         ]
 
         common_data = {
