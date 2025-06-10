@@ -216,7 +216,7 @@ print(f"t_url: {t_url}")
 
 
 url = "http://140.238.6.167:5001/send_template"
-to_users = ["oXUv66MibUi7VInLBf7AHqMIY438", "oXUv66DvDIoQG39Vnspwj97QVLn4"]
+to_users = ["oXUv66MibUi7VInLBf7AHqMIY438", "oXUv66DvDIoQG39Vnspwj97QVLn4", "oXUv66HUVNyZ0Hd8RWKmkVV1dkAs"]
 
 for to_user in to_users:
     while True:
