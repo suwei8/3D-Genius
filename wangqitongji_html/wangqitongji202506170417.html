@@ -1,0 +1,88 @@
+
+    <!DOCTYPE html>
+    <html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TrendHunter Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            h1, h2, h3 { color: #333; }
+            ul { padding-left: 20px; }
+            p, li { line-height: 1.6; word-wrap: break-word; overflow-wrap: break-word; }
+            .container { max-width: 800px; margin: auto; }
+            .highlight { background-color: #f0f8ff; padding: 10px; border-radius: 5px; }
+            #passwordBox { margin-top: 50px; text-align: center; }
+            #passwordInput { padding: 10px; font-size: 16px; width: 200px; margin-bottom: 10px; }
+            #errorMessage { color: red; display: none; }
+        </style>
+        <script>
+            function checkPassword() {
+                let inputPassword = document.getElementById('passwordInput').value;
+                if (inputPassword !== "6") {
+                    document.getElementById('errorMessage').style.display = 'block';
+                } else {
+                    document.getElementById('errorMessage').style.display = 'none';
+                    document.getElementById('report-content').style.display = 'block';
+                    document.getElementById('passwordBox').style.display = 'none';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="passwordBox">
+            <h2>请输入密码以查看内容：</h2>
+            <input type="password" id="passwordInput" placeholder="输入密码">
+            <br>
+            <button onclick="checkPassword()">确认</button>
+            <p id="errorMessage">密码错误！请重试。</p>
+        </div>
+        
+        <div id="report-content" class="container" style="display: none;">
+            <h1>推算报告</h1>
+            <p>今日日期：2025-06-17</p>
+            <p>所属月份：6</p>
+            <p>所属星期几：周二</p>
+            <p>上期开奖号码：[9, 6, 9]</p>
+            
+            <h2>一、推算下期开奖号码结果：</h2>
+            <ul>
+                <li>近5期推算：5,4,2</li>
+                <li>往年今日推算：6,4,5</li>
+                <li>往月今日推算：2,4,6</li>
+                <li>以往同周推算：3,9,5</li>
+                <li>历史数位： 890,899,897,810,819,817,880,889,887,390,399,397,310,319,317,380,389,387,590,599,597,510,519,517,580,589,587</li>
+            </ul>
+            
+            <h2>二、历史统计简报数据</h2>
+            <h3>1、根据上期号码的历史数字位置统计</h3>
+            <p class="highlight">百位预测：['8: 79次', '3: 77次', '5: 76次']</p>
+            <p class="highlight">十位预测：['9: 87次', '1: 87次', '8: 82次']</p>
+            <p class="highlight">个位预测：['0: 99次', '9: 94次', '7: 85次']</p>
+            
+            <h3>2、“最近5期”数字频率：</h3>
+            <p>频率排序：9,6,7,5,4,2,3,0</p>
+            <p>频率次数：['9: 6次', '6: 2次', '7: 2次', '5: 1次', '4: 1次', '2: 1次', '3: 1次', '0: 1次']</p>
+            
+            <h3>3、“往年今日”数字频率：</h3>
+            <p>频率排序：3,2,7,8,0,4,5,1,9,6</p>
+            <p>频率次数：['3: 9次', '2: 8次', '7: 8次', '8: 7次', '0: 7次', '4: 5次', '5: 5次', '1: 5次', '9: 5次', '6: 1次']</p>
+            
+            <h3>4、“往月今日”数字频率：</h3>
+            <p>频率排序：8,5,1,7,3,9,0,6,4,2</p>
+            <p>频率次数：['8: 90次', '5: 78次', '1: 76次', '7: 76次', '3: 75次', '9: 71次', '0: 70次', '6: 66次', '4: 64次', '2: 57次']</p>
+            
+            <h3>5、“以往同周”数字频率：</h3>
+            <p>频率排序：6,8,7,4,2,0,5,1,9,3</p>
+            <p>频率次数：['6: 347次', '8: 345次', '7: 324次', '4: 322次', '2: 314次', '0: 310次', '5: 298次', '1: 298次', '9: 292次', '3: 285次']</p>
+            
+            <h2>三、历史开奖号码简报</h2>
+            <h3>1、最近5期开奖号码统计：</h3>
+            <p>2025-06-16 - 开奖号码：9,6,9<br>2025-06-15 - 开奖号码：7,7,5<br>2025-06-14 - 开奖号码：4,9,9<br>2025-06-13 - 开奖号码：9,2,3<br>2025-06-12 - 开奖号码：0,6,9</p>
+            
+            <h3>2、往年今日开奖号码统计：</h3>
+            <p>2005-06-17 - 开奖号码：4,8,8<br>2006-06-17 - 开奖号码：8,0,3<br>2007-06-17 - 开奖号码：2,2,5<br>2008-06-17 - 开奖号码：1,3,2<br>2009-06-17 - 开奖号码：0,4,8<br>2010-06-17 - 开奖号码：3,1,0<br>2011-06-17 - 开奖号码：3,7,1<br>2012-06-17 - 开奖号码：8,3,2<br>2013-06-17 - 开奖号码：5,3,7<br>2014-06-17 - 开奖号码：0,4,5<br>2015-06-17 - 开奖号码：8,2,3<br>2016-06-17 - 开奖号码：6,3,4<br>2017-06-17 - 开奖号码：7,9,7<br>2018-06-17 - 开奖号码：7,9,4<br>2019-06-17 - 开奖号码：9,7,2<br>2020-06-17 - 开奖号码：1,0,9<br>2021-06-17 - 开奖号码：3,0,7<br>2022-06-17 - 开奖号码：9,5,8<br>2023-06-17 - 开奖号码：7,5,0<br>2024-06-17 - 开奖号码：2,1,2</p>
+        </div>
+    </body>
+    </html>
+    
