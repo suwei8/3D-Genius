@@ -1,0 +1,88 @@
+
+    <!DOCTYPE html>
+    <html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TrendHunter Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            h1, h2, h3 { color: #333; }
+            ul { padding-left: 20px; }
+            p, li { line-height: 1.6; word-wrap: break-word; overflow-wrap: break-word; }
+            .container { max-width: 800px; margin: auto; }
+            .highlight { background-color: #f0f8ff; padding: 10px; border-radius: 5px; }
+            #passwordBox { margin-top: 50px; text-align: center; }
+            #passwordInput { padding: 10px; font-size: 16px; width: 200px; margin-bottom: 10px; }
+            #errorMessage { color: red; display: none; }
+        </style>
+        <script>
+            function checkPassword() {
+                let inputPassword = document.getElementById('passwordInput').value;
+                if (inputPassword !== "6") {
+                    document.getElementById('errorMessage').style.display = 'block';
+                } else {
+                    document.getElementById('errorMessage').style.display = 'none';
+                    document.getElementById('report-content').style.display = 'block';
+                    document.getElementById('passwordBox').style.display = 'none';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="passwordBox">
+            <h2>请输入密码以查看内容：</h2>
+            <input type="password" id="passwordInput" placeholder="输入密码">
+            <br>
+            <button onclick="checkPassword()">确认</button>
+            <p id="errorMessage">密码错误！请重试。</p>
+        </div>
+        
+        <div id="report-content" class="container" style="display: none;">
+            <h1>推算报告</h1>
+            <p>今日日期：2025-07-02</p>
+            <p>所属月份：7</p>
+            <p>所属星期几：周三</p>
+            <p>上期开奖号码：[4, 0, 6]</p>
+            
+            <h2>一、推算下期开奖号码结果：</h2>
+            <ul>
+                <li>近5期推算：0,6,3</li>
+                <li>往年今日推算：8,6,1</li>
+                <li>往月今日推算：2,8,6</li>
+                <li>以往同周推算：2,0,7</li>
+                <li>历史数位： 965,968,969,905,908,909,945,948,949,465,468,469,405,408,409,445,448,449,165,168,169,105,108,109,145,148,149</li>
+            </ul>
+            
+            <h2>二、历史统计简报数据</h2>
+            <h3>1、根据上期号码的历史数字位置统计</h3>
+            <p class="highlight">百位预测：['9: 86次', '4: 85次', '1: 83次']</p>
+            <p class="highlight">十位预测：['6: 88次', '0: 87次', '4: 87次']</p>
+            <p class="highlight">个位预测：['5: 73次', '8: 73次', '9: 72次']</p>
+            
+            <h3>2、“最近5期”数字频率：</h3>
+            <p>频率排序：4,1,7,5,0,6,3,9,8</p>
+            <p>频率次数：['4: 3次', '1: 3次', '7: 2次', '5: 2次', '0: 1次', '6: 1次', '3: 1次', '9: 1次', '8: 1次']</p>
+            
+            <h3>3、“往年今日”数字频率：</h3>
+            <p>频率排序：5,7,0,3,1,9,4,2,6,8</p>
+            <p>频率次数：['5: 10次', '7: 8次', '0: 8次', '3: 8次', '1: 5次', '9: 5次', '4: 5次', '2: 5次', '6: 4次', '8: 2次']</p>
+            
+            <h3>4、“往月今日”数字频率：</h3>
+            <p>频率排序：5,0,9,7,3,1,6,4,8,2</p>
+            <p>频率次数：['5: 85次', '0: 76次', '9: 75次', '7: 74次', '3: 71次', '1: 67次', '6: 65次', '4: 65次', '8: 64次', '2: 60次']</p>
+            
+            <h3>5、“以往同周”数字频率：</h3>
+            <p>频率排序：8,5,3,6,1,9,4,7,0,2</p>
+            <p>频率次数：['8: 349次', '5: 344次', '3: 328次', '6: 319次', '1: 311次', '9: 309次', '4: 303次', '7: 301次', '0: 299次', '2: 281次']</p>
+            
+            <h2>三、历史开奖号码简报</h2>
+            <h3>1、最近5期开奖号码统计：</h3>
+            <p>2025-07-01 - 开奖号码：4,0,6<br>2025-06-30 - 开奖号码：1,1,3<br>2025-06-29 - 开奖号码：4,7,5<br>2025-06-28 - 开奖号码：9,7,8<br>2025-06-27 - 开奖号码：5,1,4</p>
+            
+            <h3>2、往年今日开奖号码统计：</h3>
+            <p>2005-07-02 - 开奖号码：5,1,7<br>2006-07-02 - 开奖号码：0,8,3<br>2007-07-02 - 开奖号码：9,4,2<br>2008-07-02 - 开奖号码：4,4,8<br>2009-07-02 - 开奖号码：5,5,1<br>2010-07-02 - 开奖号码：0,0,1<br>2011-07-02 - 开奖号码：9,0,5<br>2012-07-02 - 开奖号码：6,9,4<br>2013-07-02 - 开奖号码：3,0,7<br>2014-07-02 - 开奖号码：3,4,7<br>2015-07-02 - 开奖号码：7,7,3<br>2016-07-02 - 开奖号码：1,9,5<br>2017-07-02 - 开奖号码：2,7,6<br>2018-07-02 - 开奖号码：2,3,5<br>2019-07-02 - 开奖号码：5,0,1<br>2020-07-02 - 开奖号码：5,6,9<br>2021-07-02 - 开奖号码：0,2,3<br>2022-07-02 - 开奖号码：5,5,7<br>2023-07-02 - 开奖号码：7,3,0<br>2024-07-02 - 开奖号码：2,3,6</p>
+        </div>
+    </body>
+    </html>
+    
